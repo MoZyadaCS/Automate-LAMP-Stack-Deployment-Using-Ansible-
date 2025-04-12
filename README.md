@@ -47,7 +47,8 @@ ex :
 [web]
 localhost ansible_connection=local
 
-
 web : group name used in the playbook
+
 localhost : is the target host
+
 ansible_connection=local : this to make ansible run commands locally
