@@ -1,0 +1,17 @@
+---
+- name: Install Apache
+  apt:
+    name: apache2
+    state: present
+    update_cache: yes
+
+- name: Enable and start Apache service
+  systemd:
+    name: apache2
+    enabled: yes
+    state: started
+
+- name: Copy index.php file
+  copy:
+    src: index.php
+    dest: /var/www/html/index.php
